@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Easybook.Api.SDKStellar", "EBC_Stellar\Easybook.Api.SDKStellar.csproj", "{E7BB28E6-EAA8-46D9-859C-28F0DBFF2F5E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3CB00304-575F-4138-86C2-CA8EFEA4F29B} = {3CB00304-575F-4138-86C2-CA8EFEA4F29B}
+		{AE5B9804-FE27-4DBD-85F5-D82B4EDD75F2} = {AE5B9804-FE27-4DBD-85F5-D82B4EDD75F2}
+		{DEED68DA-BD0E-4C28-899C-2B22FE5F3E5E} = {DEED68DA-BD0E-4C28-899C-2B22FE5F3E5E}
+		{E4B08CDD-F4EB-4E95-9161-6E4CE52309BB} = {E4B08CDD-F4EB-4E95-9161-6E4CE52309BB}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Easybook.Api.DataAccessLayer", "Easybook.Api.DataAccessLayer\Easybook.Api.DataAccessLayer.csproj", "{E4B08CDD-F4EB-4E95-9161-6E4CE52309BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Easybook.Api.Core.CrossCutting", "Easybook.Api.Core.CrossCutting\Easybook.Api.Core.CrossCutting.csproj", "{3CB00304-575F-4138-86C2-CA8EFEA4F29B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E4B08CDD-F4EB-4E95-9161-6E4CE52309BB} = {E4B08CDD-F4EB-4E95-9161-6E4CE52309BB}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Easybook.Api.BusinessLogic", "Easybook.Api.BusinessLogic\Easybook.Api.BusinessLogic.csproj", "{DEED68DA-BD0E-4C28-899C-2B22FE5F3E5E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3CB00304-575F-4138-86C2-CA8EFEA4F29B} = {3CB00304-575F-4138-86C2-CA8EFEA4F29B}
+		{E4B08CDD-F4EB-4E95-9161-6E4CE52309BB} = {E4B08CDD-F4EB-4E95-9161-6E4CE52309BB}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_CryptoEBCoin", "API_Wallet\API_Wallet\API_CryptoEBCoin.csproj", "{AE5B9804-FE27-4DBD-85F5-D82B4EDD75F2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3CB00304-575F-4138-86C2-CA8EFEA4F29B} = {3CB00304-575F-4138-86C2-CA8EFEA4F29B}
+		{DEED68DA-BD0E-4C28-899C-2B22FE5F3E5E} = {DEED68DA-BD0E-4C28-899C-2B22FE5F3E5E}
+		{E4B08CDD-F4EB-4E95-9161-6E4CE52309BB} = {E4B08CDD-F4EB-4E95-9161-6E4CE52309BB}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7BB28E6-EAA8-46D9-859C-28F0DBFF2F5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7BB28E6-EAA8-46D9-859C-28F0DBFF2F5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7BB28E6-EAA8-46D9-859C-28F0DBFF2F5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7BB28E6-EAA8-46D9-859C-28F0DBFF2F5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4B08CDD-F4EB-4E95-9161-6E4CE52309BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4B08CDD-F4EB-4E95-9161-6E4CE52309BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4B08CDD-F4EB-4E95-9161-6E4CE52309BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4B08CDD-F4EB-4E95-9161-6E4CE52309BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CB00304-575F-4138-86C2-CA8EFEA4F29B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CB00304-575F-4138-86C2-CA8EFEA4F29B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CB00304-575F-4138-86C2-CA8EFEA4F29B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CB00304-575F-4138-86C2-CA8EFEA4F29B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEED68DA-BD0E-4C28-899C-2B22FE5F3E5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEED68DA-BD0E-4C28-899C-2B22FE5F3E5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEED68DA-BD0E-4C28-899C-2B22FE5F3E5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEED68DA-BD0E-4C28-899C-2B22FE5F3E5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE5B9804-FE27-4DBD-85F5-D82B4EDD75F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE5B9804-FE27-4DBD-85F5-D82B4EDD75F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE5B9804-FE27-4DBD-85F5-D82B4EDD75F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE5B9804-FE27-4DBD-85F5-D82B4EDD75F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {04E2F2B9-7053-4261-BC1B-ABAADF04A709}
+	EndGlobalSection
+EndGlobal

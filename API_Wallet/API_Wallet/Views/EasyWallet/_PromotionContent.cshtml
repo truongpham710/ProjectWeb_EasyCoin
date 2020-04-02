@@ -1,0 +1,366 @@
+﻿@model  API_Wallet.Models.PromotionContentModels
+@{
+    var currentCountry = Model.Country;
+    var walletUrl = Model.UrlWalet;
+}
+<div class="container">
+    <div class="alert alert-grey text12">
+        <strong>Important:</strong><br />
+        You are required to read the <a href="" data-toggle="modal" data-target="#tnc-easybook-wallet">Terms &amp; Conditions</a> of the Easybook Wallet before proceeding further. The use of Easybook Wallet is subject to its T&C which shall be governed by the laws of Singapore. By using the Easybook Wallet, you hereby agree to the terms &amp; conditions. @Html.Partial("/Views/EasyWallet/_TermCondition.cshtml")
+    </div>
+</div>
+
+<div class="ewallet-info">
+    <div class="container">
+
+        <div class="row">
+            @if (currentCountry == "zz" || currentCountry == "sg" || currentCountry == "my")
+            {
+                <div class="col-sm-12 hidden-xs">
+                    <a href="@walletUrl"><img src="~/images/ewallet/5percent30-mysg.jpg" class="img-responsive" /></a>
+                </div>
+                <div class="col-sm-12 m-top15 m-bottom15 hidden-lg hidden-lg hidden-md hidden-sm">
+                    <a href="@walletUrl"><img src="~/images/ewallet/5percent30-mysg-m.jpg" class="img-responsive" /></a>
+                </div>
+            }
+            @if (currentCountry == "id")
+            {
+                <div class="col-sm-12 hidden-xs">
+                    <a href="@walletUrl"><img src="~/images/ewallet/5percent30-id.jpg" class="img-responsive" /></a>
+                </div>
+                <div class="col-sm-12 m-top15 m-bottom15 hidden-lg hidden-lg hidden-md hidden-sm">
+                    <a href="@walletUrl"><img src="~/images/ewallet/5percent30-id-m.jpg" class="img-responsive" /></a>
+                </div>
+            }
+            @if (currentCountry == "th")
+            {
+                <div class="col-sm-12 hidden-xs">
+                    <a href="@walletUrl"><img src="~/images/ewallet/5percent30-th.jpg" class="img-responsive" /></a>
+                </div>
+                <div class="col-sm-12 m-top15 m-bottom15 hidden-lg hidden-lg hidden-md hidden-sm">
+                    <a href="@walletUrl"><img src="~/images/ewallet/5percent30-th-m.jpg" class="img-responsive" /></a>
+                </div>
+            }
+            @if (currentCountry == "vn")
+            {
+                <div class="col-sm-12 hidden-xs">
+                    <a href="@walletUrl"><img src="~/images/ewallet/5percent30-vn.jpg" class="img-responsive" /></a>
+                </div>
+                <div class="col-sm-12 m-top15 m-bottom15 hidden-lg hidden-lg hidden-md hidden-sm">
+                    <a href="@walletUrl"><img src="~/images/ewallet/5percent30-vn-m.jpg" class="img-responsive" /></a>
+                </div>
+            }
+            @if (currentCountry == "mm")
+            {
+                <div class="col-sm-12 hidden-xs">
+                    <a href="@walletUrl"><img src="~/images/ewallet/5percent30-mm.jpg" class="img-responsive" /></a>
+                </div>
+                <div class="col-sm-12 m-top15 m-bottom15 hidden-lg hidden-lg hidden-md hidden-sm">
+                    <a href="@walletUrl"><img src="~/images/ewallet/5percent30-mm-m.jpg" class="img-responsive" /></a>
+                </div>
+            }
+        </div>
+
+        <div class="alert alert-info">
+            <h4>How 5% p.a. is calculated</h4>
+            Example:<br />
+            Deposit $1000 TO EASYBOOK WALLET on 1 Jan 2019 & earn 5% p.a. <br />
+            If withdrawals are made at 31 DEC 2019, you will get $1050.00 <br />
+            If withdrawals are made at 31 DEC 2020, you will get $1102.50
+        </div>
+
+        <div class="interest-chart">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-7">
+                            <div class="hidden-xs">
+                                <img src="~/images/ewallet/interest-chart.jpg" class="img-responsive" />
+                            </div>
+                            <div class="hidden-lg hidden-lg hidden-md hidden-sm m-bottom15">
+                                <img src="~/images/ewallet/interest-chart-m.jpg" class="img-responsive" />
+                            </div>
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="item">
+                                        <strong>2019</strong>
+                                        <div class="legend-interest">Total Cash Bonus: <span>$50.00</span></div>
+                                        <div class="legend-deposit">Initial Deposit: <span>$1,000.00</span></div>
+                                    </div>
+                                    <div class="item">
+                                        <strong>2020</strong>
+                                        <div class="legend-interest">Total Cash Bonus: <span>$102.50</span></div>
+                                        <div class="legend-deposit">Initial Deposit: <span>$1,000.00</span></div>
+                                    </div>
+                                    <div class="item">
+                                        <strong>2021</strong>
+                                        <div class="legend-interest">Total Cash Bonus: <span>$157.62</span></div>
+                                        <div class="legend-deposit">Initial Deposit: <span>$1,000.00</span></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="item">
+                                        <strong>2022</strong>
+                                        <div class="legend-interest">Total Cash Bonus: <span>$215.51</span></div>
+                                        <div class="legend-deposit">Initial Deposit: <span>$1,000.00</span></div>
+                                    </div>
+                                    <div class="item">
+                                        <strong>2023</strong>
+                                        <div class="legend-interest">Total Cash Bonus: <span>$276.28</span></div>
+                                        <div class="legend-deposit">Initial Deposit: <span>$1,000.00</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row m-bottom30">
+                    <div class="col-sm-12">
+                        <div class="title text-center">
+                            <div>5 Important Things To Know About Easybook Wallet</div>
+                        </div>
+                        <div class="text-center m-bottom30">
+                            Ready to deposit in Easybook Wallet? Here’s a few things you need to know about Easybook Wallet and how it works.
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="row m-bottom25">
+                                    <div class="col-xs-2 icon">
+                                        <img src="~/images/ewallet/tickets.svg" />
+                                    </div>
+                                    <div class="col-xs-9">
+                                        <div class="point-title">Purchase Easybook Product</div>
+                                        <p>
+                                            Use Easybook Wallet to purchase any Easybook products:<br />
+                                            Bus ticket, train ticket, ferry ticket, car rental, flight ticket (coming soon), hotel booking (coming soon), retail payment (coming soon), cruise ticket (coming soon), tour package (coming soon) and many more to come.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="row m-bottom25">
+                                    <div class="col-xs-2 icon">
+                                        <img src="~/images/ewallet/bonus.svg" />
+                                    </div>
+                                    <div class="col-xs-9">
+                                        <div class="point-title">Cash Bonus</div>
+                                        <p>Earn 5% p.a. cash bonus (effective rate) for your Easybook Wallet balance which is compounded on a daily basis.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="row m-bottom25">
+                                    <div class="col-xs-2 icon">
+                                        <img src="~/images/ewallet/safe.svg" />
+                                    </div>
+                                    <div class="col-xs-9">
+                                        <div class="point-title">Safe to Withdraw</div>
+                                        <p>If your phone is lost, you can still withdraw money by using email or phone number.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="row m-bottom25">
+                                    <div class="col-xs-2 icon">
+                                        <img src="~/images/ewallet/currency.svg" />
+                                    </div>
+                                    <div class="col-xs-9">
+                                        <div class="point-title">Currency</div>
+                                        <p>
+                                            Easybook Wallet currently accepts the following currencies:<br />
+                                            SGD, MYR, IDR, THB, USD, RMB, MMK
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="row m-bottom25">
+                                    <div class="col-xs-2 icon">
+                                        <img src="~/images/ewallet/withdraw.svg" />
+                                    </div>
+                                    <div class="col-xs-9">
+                                        <div class="point-title">Withdraw at Anytime</div>
+                                        <p>Withdrawals for Easybook Wallet deposit can be made at anytime</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="row m-bottom25">
+                                    <div class="col-xs-2 icon">
+                                        <img src="~/images/ewallet/hammer.svg" />
+                                    </div>
+                                    <div class="col-xs-9">
+                                        <div class="point-title">Laws & Regulations</div>
+                                        <p>
+                                            Easybook Wallet complies to applicable laws, rules and regulations in Singapore.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        @if (currentCountry == "zz" || currentCountry == "sg" || currentCountry == "my")
+        {
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row m-bottom30">
+                        <div class="col-sm-12">
+                            <div class="title text-center">
+                                <div>Top Up and Earn Bonus Rewards with Easybook Wallet</div>
+                            </div>
+                            <div class="text-center">
+                                Register for a membership and use Easybook Wallet to purchase any Easybook product and enjoy amazing cash bonus!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-offset-2 col-sm-8">
+                            <div class="alert alert-info text-center">
+                                Tier 1: Top Up RM100/SGD100 FREE RM8/SGD8<br />
+                                Tier 2: Top Up RM300/SGD300 FREE RM30/SGD30
+                            </div>
+                            <div class="text12">*Promo lasts until 16 June 2019</div>
+                            <div class="text12">*T&C apply</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        @if (currentCountry == "id")
+        {
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row m-bottom30">
+                        <div class="col-sm-12">
+                            <div class="title text-center">
+                                <div>Top Up and Earn Bonus Rewards with Easybook Wallet</div>
+                            </div>
+                            <div class="text-center">
+                                Register for a membership and use Easybook Wallet to purchase any Easybook product and enjoy amazing cash bonus!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-offset-2 col-sm-8">
+                            <div class="alert alert-info text-center">
+                                Tier 1: Top Up Rp300,000 FREE Rp24,000<br />
+                                Tier 2: Top Up Rp900,000 FREE Rp90,000
+                            </div>
+                            <div class="text12">*Promo lasts until 16 June 2019</div>
+                            <div class="text12">*T&C apply</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        @if (currentCountry == "th")
+        {
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row m-bottom30">
+                        <div class="col-sm-12">
+                            <div class="title text-center">
+                                <div>Top Up and Earn Bonus Rewards with Easybook Wallet</div>
+                            </div>
+                            <div class="text-center">
+                                Register for a membership and use Easybook Wallet to purchase any Easybook product and enjoy amazing cash bonus!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-offset-2 col-sm-8">
+                            <div class="alert alert-info text-center">
+                                Tier 1: Top Up THB1,000 FREE THB80<br />
+                                Tier 2: Top Up THB3,000 FREE THB300
+                            </div>
+                            <div class="text12">*Promo lasts until 16 June 2019</div>
+                            <div class="text12">*T&C apply</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        @if (currentCountry == "vn")
+        {
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row m-bottom30">
+                        <div class="col-sm-12">
+                            <div class="title text-center">
+                                <div>Top Up and Earn Bonus Rewards with Easybook Wallet</div>
+                            </div>
+                            <div class="text-center">
+                                Register for a membership and use Easybook Wallet to purchase any Easybook product and enjoy amazing cash bonus!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-offset-2 col-sm-8">
+                            <div class="alert alert-info text-center">
+                                Tier 1: Top Up VND600,000 FREE VND50,000<br />
+                                Tier 2: Top Up VND1,800,000 FREE VND180,000
+                            </div>
+                            <div class="text12">*Promo lasts until 16 June 2019</div>
+                            <div class="text12">*T&C apply</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        @if (currentCountry == "mm")
+        {
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row m-bottom30">
+                        <div class="col-sm-12">
+                            <div class="title text-center">
+                                <div>Top Up and Earn Bonus Rewards with Easybook Wallet</div>
+                            </div>
+                            <div class="text-center">
+                                Register for a membership and use Easybook Wallet to purchase any Easybook product and enjoy amazing cash bonus!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-offset-2 col-sm-8">
+                            <div class="alert alert-info text-center">
+                                Tier 1: Top Up MMK37,000 FREE MMK3,000<br />
+                                Tier 2: Top Up MMK110,000 FREE MMK11,000
+                            </div>
+                            <div class="text12">*Promo lasts until 16 June 2019</div>
+                            <div class="text12">*T&C apply</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div class="row m-bottom30">
+            <div class="col-sm-12">
+                <div class="text12">
+                    * Please refer to <a href="" data-toggle="modal" data-target="#tnc-easybook-wallet">Terms and Conditions</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

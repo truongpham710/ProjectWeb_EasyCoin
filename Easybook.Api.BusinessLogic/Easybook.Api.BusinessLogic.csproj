@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DEED68DA-BD0E-4C28-899C-2B22FE5F3E5E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Easybook.Api.BusinessLogic</RootNamespace>
+    <AssemblyName>Easybook.Api.BusinessLogic</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Easybook.Api.Core.CrossCutting">
+      <HintPath>..\Easybook.Api.Core.CrossCutting\bin\Debug\Easybook.Api.Core.CrossCutting.dll</HintPath>
+    </Reference>
+    <Reference Include="Easybook.Api.Core.Model.EasyWallet, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Easybook.Api.Core.Model.EasyWallet\bin\Debug\Easybook.Api.Core.Model.EasyWallet.dll</HintPath>
+    </Reference>
+    <Reference Include="Easybook.Api.DataAccessLayer">
+      <HintPath>..\Easybook.Api.DataAccessLayer\bin\Debug\Easybook.Api.DataAccessLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="EBC_Stellar">
+      <HintPath>..\EBC_Stellar\bin\Debug\netstandard2.0\EBC_Stellar.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PhoneNumbers, Version=8.9.15.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\libphonenumber-csharp.8.9.15\lib\net40\PhoneNumbers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApiLogic\BusinessObjects\Logic\PhoneLogic.cs" />
+    <Compile Include="ApiLogic\BusinessObjects\Logic\WalletApiLogic.cs" />
+    <Compile Include="ApiLogic\BusinessObjects\Response.cs" />
+    <Compile Include="ApiLogic\BusinessObjects\Wallet\CalculationWithdrawalFeesRequest.cs" />
+    <Compile Include="ApiLogic\BusinessObjects\Wallet\TransactionRequestTownBus.cs" />
+    <Compile Include="ApiLogic\BusinessObjects\Wallet\TransactionResponse.cs" />
+    <Compile Include="ApiLogic\BusinessObjects\Wallet\TransactionRequest.cs" />
+    <Compile Include="ApiLogic\BusinessObjects\Wallet\TransactionTownBusResponse.cs" />
+    <Compile Include="ApiLogic\BusinessObjects\Wallet\UserBankAccountRequest.cs" />
+    <Compile Include="ApiLogic\BusinessObjects\Wallet\UserCardRequest.cs" />
+    <Compile Include="ApiLogic\BusinessObjects\Wallet\UserRequest.cs" />
+    <Compile Include="ApiLogic\BusinessObjects\Wallet\WalletUserResponse.cs" />
+    <Compile Include="EasyWallet\Constant\ApiCommonConstant.cs" />
+    <Compile Include="EasyWallet\Constant\ApiReturnCodeConstant.cs" />
+    <Compile Include="EasyWallet\Constant\EwalletConstant.cs" />
+    <Compile Include="EasyWallet\UserBankAccountLogic.cs" />
+    <Compile Include="EasyWallet\Utility\ConvertUtility.cs" />
+    <Compile Include="EasyWallet\Utility\LogUtil.cs" />
+    <Compile Include="EasyWallet\Utility\SecurityLogic.cs" />
+    <Compile Include="EasyWallet\WalletCalculationWithdrawFeeLogic.cs" />
+    <Compile Include="EasyWallet\WalletTownbusLogic.cs" />
+    <Compile Include="EasyWallet\WalletInterestLogic.cs" />
+    <Compile Include="EasyWallet\WalletRewardLogic.cs" />
+    <Compile Include="EasyWallet\WalletSnapshotLogic.cs" />
+    <Compile Include="EasyWallet\WalletTransactionLogic.cs" />
+    <Compile Include="EasyWallet\WalletAccountLogic.cs" />
+    <Compile Include="EasyWallet\WalletUserLogic.cs" />
+    <Compile Include="MoengagePush\MoengagePushApi.cs" />
+    <Compile Include="MoengagePush\MoengageRequest.cs" />
+    <Compile Include="MoengagePush\MoengageResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="PushyMeLib\PushyAPI.cs" />
+    <Compile Include="PushyMeLib\SendNotification.cs" />
+    <Compile Include="Web References\localhost\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\localhost\EWallet_StampService.wsdl" />
+    <None Include="Web References\localhost\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:64820/EWallet_StampService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\localhost\</RelPath>
+      <UpdateFromURL>http://localhost:64820/EWallet_StampService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Easybook_Api_BusinessLogic_localhost_EWallet_StampService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\localhost\EWallet_StampService.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
